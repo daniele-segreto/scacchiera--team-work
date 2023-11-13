@@ -1,0 +1,23 @@
+.btn-casuale {
+    width: 23%;
+    height: 5%;
+    background-color: #009696;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3); 
+    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3);
+}
+
+.btn-giocatore {
+    width: 23%;
+    height: 5%;
+    background-color: #ffaa00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3); 
+    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3);
+}

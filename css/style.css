@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0px;
+    font-family: 'Young Serif', serif;
+}
+
+body{
+    background-color: #EEEEEE;
+}
+
+.row-title h1 {
+    color: #333;
+    background: #FFFFFF;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+    font-size: 80px;
+    background-color: #EEEEEE;
+}
+
+.row-title {
+    padding-top: 1%;
+    text-align: center;
+    padding-left: 2%;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+    margin: 15% auto;
+    display: flex;
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #333;
+    padding: 4px 4px 6px 4px;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3) ; 
+    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3)  ;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.slide-bottom {
+	-webkit-animation: slide-bottom 1s cubic-bezier(0.770, 0.000, 0.175, 1.000) 0.25s both;
+	        animation: slide-bottom 1s cubic-bezier(0.770, 0.000, 0.175, 1.000) 0.25s both;
+}
+
+ @-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+  }
+  
+
+.row {
+    display: flex;
+    height: 12.5%;
+    width: 50em;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid black;*/
+    width: 12.5%;
+    height: 100%;
+    margin: auto;
+}
+
+.row .square:nth-of-type(even) {
+    background-color: #f2e205;
+} 
+
+.row .square:nth-of-type(odd) {
+    background-color: #5cb9f2;
+} 
+
+.row:nth-of-type(even) .square:nth-of-type(even) {
+    background-color: #5cb9f2;
+}
+
+.row:nth-of-type(even) .square:nth-of-type(odd){
+    background-color: #f2e205;
+}
+
+#controlli {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 5%;
+    padding-top: 20%;
+    margin: 0 auto;
+}
+
+.btn-casuale {
+    cursor: pointer;
+    background-color: #5cb9f2  ;
+    color: black  ;
+    border: none  ;
+    border-radius: 10px  ;
+    padding: 10px  ;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3)  ; 
+    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3)  ;
+    width: 100%;
+    
+}
+
+.btn-giocatore {
+    cursor: pointer;
+    background-color: #f2e205  ;
+    color: black  ;
+    border: none  ;
+    border-radius: 10px  ;
+    padding: 10px  ;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3)  ; 
+    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3)  ;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.messaggi {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.posizione {
+    margin: 20px;
+    
+    background-color: #f2e205;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3)  ; 
+    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3)  ;
+    border-radius: 10px  ;
+    width: 100%;
+    height: 10%;
+    margin-top: 75%;
+    margin-bottom: 27%;
+    
+}
+
+.message {
+    margin: 20px;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3) ; 
+    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.3)  ;
+    border-radius: 10px  ;
+    width: 100%;
+    height: 8%;
+    margin-top: 45%;
+    border: solid 3px #bf2a45;
+    color: #bf2a45;
+    font-size: 25px;
+    
+    
+}
+
+#posizione_pedone {
+    font-size: 30px;
+}
+
+.posizione p {
+    padding: 5%;
+}
+
+.message p {
+    padding-top: 8%;
+}
+
+.visibile {
+    display: block;
+}
+
+.invisibile {
+    display: none;
+}
+
+.meteora_p {
+    font-size: 130px;
+}
+
+.astronauta_p {
+    padding-left: 15%;
+    padding-right: 11%;
+    font-size: 130px;
+}
+
+.astronauta {
+    font-size: 45px;
+    margin: 0 auto;
+}
+
+/* html pedina giocatore
+<i class="fas fa-user-astronaut astronauta_p" style="color: #082f7d;"></i> */
+
+.meteora {
+    font-size: 45px;
+    margin: 0 auto;
+}
+
+/* html pedina avversario
+<i class="fas fa-meteor meteora_p" style="color: #bf2a45;"></i> */
+
+.arrow i {
+    font-size: 70px;
+}
+
+.arrow {
+    text-align: center;
+    padding-top: 25%;
+}
+
+#left {
+    cursor: pointer;
+    margin-right: 45%;
+    color: #f29f05;
+}
+
+#left:hover{
+    transform: scale(1.25);
+}
+
+#right{
+    cursor: pointer;
+    color: #f29f05;
+}
+
+#right:hover{
+    transform: scale(1.25);
+}
+
+#up{
+    cursor: pointer;
+    padding-bottom: 13%;
+    color: #0487d9;
+}
+
+#up:hover{
+    transform: scale(1.25);
+}
+
+#down{
+    cursor: pointer;
+    padding-top: 13%;
+    color: #0487d9;
+}
+
+#down:hover{
+    transform: scale(1.25);
+}
+
+.lettere{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 3%;
+}
+
+.numeri{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 600px;
+    padding-right: 3%;
+    
+}
+
+.btn-casuale:hover {
+    background-color: #5658ef;
+    color:white;
+}
+
+.btn-giocatore:hover {
+    background-color: #f5a104;
+    color:white;
+}

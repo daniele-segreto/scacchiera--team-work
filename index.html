@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Scacchi</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"&gt;>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="row-title slide-bottom" style="position: absolute; top:-110px;"><h1>TIK TAK BOH?</h1></div>
+        <div class="main">
+            <div class="messaggi">
+                <div class="posizione"><p>Il pedone è in posizione:</p> <span id="posizione_pedone"></span></div>
+                <div class="icone">
+                    <i class="fas fa-user-astronaut astronauta_p" style="color: #082F7d;"></i>
+                    <i class="fas fa-meteor meteora_p" style="color: #bf2a45;"></i>
+                </div>
+                <div class="message invisibile" id="errore"><p>Mossa non valida</p></div>
+            </div>
+
+            <div class="container"> 
+                <div class="numeri">
+                    <div>8</div>
+                    <div>7</div>
+                    <div>6</div>
+                    <div>5</div>
+                    <div>4</div>
+                    <div>3</div>
+                    <div>2</div>
+                    <div>1</div>
+                </div>
+            <div id="board">
+                <div class="row">
+                    <div id="56" class="square"></div>
+                    <div id="57" class="square"></div>
+                    <div id="58" class="square"></div>
+                    <div id="59" class="square"></div>
+                    <div id="60" class="square"></div>
+                    <div id="61" class="square"></div>
+                    <div id="62" class="square"></div>
+                    <div id="63" class="square"></div>
+                </div>
+                <div class="row">
+                    <div id="48" class="square"></div>
+                    <div id="49" class="square"></div>
+                    <div id="50" class="square"></div>
+                    <div id="51" class="square"></div>
+                    <div id="52" class="square"></div>
+                    <div id="53" class="square"></div>
+                    <div id="54" class="square"></div>
+                    <div id="55" class="square"></div>
+                    
+                </div>
+                <div class="row">
+                    <div id="40" class="square"></div>
+                    <div id="41" class="square"></div>
+                    <div id="42" class="square"></div>
+                    <div id="43" class="square"></div>
+                    <div id="44" class="square"></div>
+                    <div id="45" class="square"></div>
+                    <div id="46" class="square"></div>
+                    <div id="47" class="square"></div>
+                    
+                </div>
+                <div class="row">
+                    <div id="32" class="square"></div>
+                    <div id="33" class="square"></div>
+                    <div id="34" class="square"></div>
+                    <div id="35" class="square"></div>
+                    <div id="36" class="square"></div>
+                    <div id="37" class="square"></div>
+                    <div id="38" class="square"></div>
+                    <div id="39" class="square"></div>
+                    
+                </div>
+                <div class="row">
+                    <div id="24" class="square"></div>
+                    <div id="25" class="square"></div>
+                    <div id="26" class="square"></div>
+                    <div id="27" class="square"></div>
+                    <div id="28" class="square"></div>
+                    <div id="29" class="square"></div>
+                    <div id="30" class="square"></div>
+                    <div id="31" class="square"></div>
+                    
+                </div>
+                <div class="row">
+                    <div id="16" class="square"></div>
+                    <div id="17" class="square"></div>
+                    <div id="18" class="square"></div>
+                    <div id="19" class="square"></div>
+                    <div id="20" class="square"></div>
+                    <div id="21" class="square"></div>
+                    <div id="22" class="square"></div>
+                    <div id="23" class="square"></div>
+                    
+                </div>
+                <div class="row">
+                    <div id="8" class="square"></div>
+                    <div id="9" class="square"></div>
+                    <div id="10" class="square"></div>
+                    <div id="11" class="square"></div>
+                    <div id="12" class="square"></div>
+                    <div id="13" class="square"></div>
+                    <div id="14" class="square"></div>
+                    <div id="15" class="square"></div>
+                    
+                </div>
+                <div class="row">
+                    <div id="0" class="square"></div>
+                    <div id="1" class="square"></div>
+                    <div id="2" class="square"></div>
+                    <div id="3" class="square"></div>
+                    <div id="4" class="square"></div>
+                    <div id="5" class="square"></div>
+                    <div id="6" class="square"></div>
+                    <div id="7" class="square"></div>
+                    <div class="meteora"></div>
+                    <div class="astronauta"></div>
+                </div>   
+                
+                <div class="lettere">
+                    <div>A</div>
+                    <div>B</div>
+                    <div>C</div>
+                    <div>D</div>
+                    <div>E</div>
+                    <div>F</div>
+                    <div>G</div>
+                    <div>H</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="controlli">
+            <div>
+                <button type="button" class="btn-casuale" onclick="spawn()">Avversari casuali</button>
+            </div>
+            <div>
+                <button type="button" class="btn-giocatore" onclick="player()">Pedina giocatore</button>
+            </div>
+            <div class="arrow">
+                <div><i class="fas fa-arrow-up" id="up" onclick="movimento('up')"></i></div>
+                <div>
+                    <i class="fas fa-arrow-left" id="left" onclick="movimento('left')"></i>
+                    <i class="fas fa-arrow-right" id="right" onclick="movimento('right')"></i>
+                </div>
+                <div><i class="fas fa-arrow-down" id="down" onclick="movimento('down')"></i></div>
+            </div>
+        </div>
+            
+
+            
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
